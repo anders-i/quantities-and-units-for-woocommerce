@@ -22,6 +22,7 @@ jQuery(document).ready( function($) {
 		var step = $input.attr( 'step' );
 		var stepOrig = step;
 		var new_qty = $input.val();
+		new_qty = parseFloat(new_qty).toFixed(2); //this line fixes a problem using "+" and "-" to change amount fx. with step value on 0,05.
 		var max = $input.attr( 'max' );
 		var min = $input.attr( 'min' );
 
